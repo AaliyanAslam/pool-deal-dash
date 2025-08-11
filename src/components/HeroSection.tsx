@@ -56,19 +56,19 @@ export const HeroSection = () => {
           {/* Premium CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
+              onClick={() => window.location.href = "#deals"}
               size="lg" 
               className="text-xl px-12 py-8 shine-effect font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary text-primary-foreground shadow-2xl hover:shadow-primary/50 transform hover:scale-105 transition-all duration-300"
             >
               Order Now
               <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="text-xl px-12 py-8 font-bold glass-effect border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 transform hover:scale-105 transition-all duration-300"
+            <a 
+              href="#deals"
+              className="rounded-xl text-xl py-4 px-8 font-bold glass-effect border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 transform hover:scale-105 transition-all duration-300"
             >
               View Deals
-            </Button>
+            </a>
           </div>
 
           {/* Social Proof */}

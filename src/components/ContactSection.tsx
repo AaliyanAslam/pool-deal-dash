@@ -73,12 +73,12 @@ export const ContactSection = () => {
                 <p className="text-green-700 mb-6">
                   Get instant help and place orders directly through WhatsApp
                 </p>
-                <Button 
-                  className="bg-green-500 hover:bg-green-600 text-white"
-                  size="lg"
+                <a 
+                  className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-xl duration-200"
+                  href="https://wa.link/8fsrrq" target="_blank" rel="noopener noreferrer"
                 >
                   Chat on WhatsApp
-                </Button>
+                </a>
               </CardContent>
             </Card>
 
@@ -90,7 +90,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email Support</h4>
-                  <p className="text-muted-foreground">support@pooldeals.com</p>
+                  <p className="text-muted-foreground">aaliyanaslam22@gmail.com</p>
                 </div>
               </div>
 
@@ -100,7 +100,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Phone Support</h4>
-                  <p className="text-muted-foreground">+91 98765 43210</p>
+                  <p className="text-muted-foreground">+92 3248876520</p>
                 </div>
               </div>
             </div>

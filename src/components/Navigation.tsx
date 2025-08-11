@@ -14,7 +14,7 @@ export const Navigation = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg pulse-glow">
               <Gamepad2 className="w-7 h-7 text-primary-foreground" />
             </div>
-            <span className="text-2xl font-black gradient-text">Pool Deal Dash</span>
+            <span className="text-2xl font-black gradient-text">Pool Ignite</span>
           </div>
 
           {/* Enhanced Desktop Menu */}
@@ -31,9 +31,9 @@ export const Navigation = () => {
               Contact
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold px-6 py-3 shine-effect hover:scale-105 transition-transform duration-300">
+            <a href="https://wa.link/8fsrrq" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold px-6 py-3 shine-effect hover:scale-105 transition-transform duration-300">
               Order Now
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -52,9 +52,9 @@ export const Navigation = () => {
               <a href="#deals" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">Deals</a>
               <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">How It Works</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">Contact</a>
-              <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold w-fit shine-effect">
+              <a href="https://wa.link/8fsrrq" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold w-fit shine-effect">
                 Order Now
-              </Button>
+              </a>
             </div>
           </div>
         )}
