@@ -72,14 +72,20 @@ export const DealsSection = () => {
             <p className="text-muted-foreground mb-6">
               Looking for bulk orders or specific packages? We've got you covered!
             </p>
-           <a
+<a
   href="https://wa.link/8fsrrq"
   target="_blank"
   rel="noopener noreferrer"
-  className="bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform duration-300 hover:opacity-90"
+  className="bg-gradient-to-r from-primary to-secondary text-primary-foreground 
+             px-4 py-2 text-sm 
+             sm:px-6 sm:py-3 sm:text-base 
+             md:px-8 md:py-4 md:text-lg 
+             rounded-full font-bold 
+             hover:scale-105 transition-transform duration-300 hover:opacity-90"
 >
   Contact us for bulk orders
 </a>
+
 
           </div>
         </div>
