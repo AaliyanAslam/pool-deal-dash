@@ -47,16 +47,39 @@ export const Navigation = () => {
 
         {/* Enhanced Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 border-t border-primary/20 glass-effect">
-            <div className="flex flex-col gap-6">
-              <a href="#deals" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">Deals</a>
-              <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">How It Works</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">Contact</a>
-              <a href="https://wa.link/8fsrrq" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold w-fit shine-effect">
-                Order Now
-              </a>
-            </div>
-          </div>
+      <div className="md:hidden py-6 border-t border-primary/20 rounded-xl p-5 mb-6 glass-effect">
+  <div className="flex flex-col gap-4">
+    <a 
+      href="#deals" 
+      className="text-foreground hover:text-primary transition-colors font-semibold text-lg"
+    >
+      Deals
+    </a>
+    <a 
+      href="#how-it-works" 
+      className="text-foreground hover:text-primary transition-colors font-semibold text-lg"
+    >
+      How It Works
+    </a>
+    <a 
+      href="#contact" 
+      className="text-foreground hover:text-primary transition-colors font-semibold text-lg"
+    >
+      Contact
+    </a>
+    <a 
+      href="https://wa.link/8fsrrq" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="bg-gradient-to-r from-primary to-secondary text-primary-foreground 
+                 font-bold w-full text-center px-6 py-3 rounded-full
+                 hover:scale-105 hover:shadow-lg transition-all duration-300 shine-effect"
+    >
+      Order Now
+    </a>
+  </div>
+</div>
+
         )}
       </div>
     </nav>
