@@ -6,42 +6,55 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <Gamepad2 className="w-6 h-6 text-primary-foreground" />
+    <nav className="fixed top-0 w-full glass-effect border-b border-primary/20 z-50 shadow-xl">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
+          {/* Enhanced Logo */}
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg pulse-glow">
+              <Gamepad2 className="w-7 h-7 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-primary">Pool Deal Dash</span>
+            <span className="text-2xl font-black gradient-text">Pool Deal Dash</span>
           </div>
 
-          {/* Desktop Menu */}
+          {/* Enhanced Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#deals" className="text-foreground hover:text-primary transition-colors">Deals</a>
-            <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors">How It Works</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
-            <Button variant="secondary" size="sm">Order Now</Button>
+            <a href="#deals" className="text-foreground hover:text-primary transition-all duration-300 font-semibold text-lg relative group">
+              Deals
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#how-it-works" className="text-foreground hover:text-primary transition-all duration-300 font-semibold text-lg relative group">
+              How It Works
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-all duration-300 font-semibold text-lg relative group">
+              Contact
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold px-6 py-3 shine-effect hover:scale-105 transition-transform duration-300">
+              Order Now
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden"
+            className="md:hidden text-foreground hover:text-primary transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Enhanced Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
-            <div className="flex flex-col gap-4">
-              <a href="#deals" className="text-foreground hover:text-primary transition-colors">Deals</a>
-              <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors">How It Works</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
-              <Button variant="secondary" size="sm" className="w-fit">Order Now</Button>
+          <div className="md:hidden py-6 border-t border-primary/20 glass-effect">
+            <div className="flex flex-col gap-6">
+              <a href="#deals" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">Deals</a>
+              <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">How It Works</a>
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">Contact</a>
+              <Button className="bg-gradient-to-r from-primary to-secondary text-primary-foreground font-bold w-fit shine-effect">
+                Order Now
+              </Button>
             </div>
           </div>
         )}

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Coins, Zap, Shield, Trophy } from "lucide-react";
+import { Coins, Zap, Shield, Trophy, Star, Crown } from "lucide-react";
 
 interface DealCardProps {
   title: string;
@@ -21,30 +21,67 @@ export const DealCard = ({ title, price, description, icon = "coins", featured =
   const IconComponent = iconMap[icon];
 
   return (
-    <Card className={`card-hover ${featured ? 'premium-glow ring-2 ring-secondary/20' : ''} relative overflow-hidden`}>
+    <Card className={`premium-card group cursor-pointer ${featured ? 'ring-2 ring-primary/50 premium-glow' : ''} relative overflow-hidden slide-in-left`}>
       {featured && (
-        <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-          Popular
-        </div>
+        <>
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg">
+            <Crown className="w-4 h-4" />
+            Popular
+          </div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
+        </>
       )}
-      <CardContent className="p-6 text-center space-y-4">
-        <div className={`w-16 h-16 mx-auto rounded-full ${featured ? 'bg-secondary/10' : 'bg-accent'} flex items-center justify-center floating-animation`}>
-          <IconComponent className={`w-8 h-8 ${featured ? 'text-secondary' : 'text-primary'}`} />
+      
+      <CardContent className="p-8 text-center space-y-6 relative">
+        {/* Premium Icon with Enhanced Animation */}
+        <div className={`w-20 h-20 mx-auto rounded-full ${
+          featured 
+            ? 'bg-gradient-to-br from-primary to-secondary shadow-2xl' 
+            : 'bg-gradient-to-br from-accent to-muted'
+        } flex items-center justify-center floating-animation group-hover:scale-110 transition-transform duration-300`}>
+          <IconComponent className={`w-10 h-10 ${
+            featured ? 'text-primary-foreground' : 'text-primary'
+          }`} />
         </div>
         
-        <div>
-          <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>
-          <p className="text-muted-foreground text-sm mb-4">{description}</p>
-          <div className="text-3xl font-bold text-primary mb-4">₹{price}</div>
+        {/* Enhanced Content */}
+        <div className="space-y-4">
+          <h3 className={`text-2xl font-bold ${
+            featured ? 'gradient-text' : 'text-foreground'
+          } mb-3`}>{title}</h3>
+          
+          <p className="text-muted-foreground leading-relaxed">{description}</p>
+          
+          <div className="relative">
+            <div className={`text-4xl font-black mb-6 ${
+              featured ? 'gradient-text text-shadow-gold' : 'text-foreground'
+            }`}>
+              ₹{price}
+            </div>
+            {featured && (
+              <div className="absolute -top-2 -right-2">
+                <Star className="w-6 h-6 text-secondary fill-current animate-pulse" />
+              </div>
+            )}
+          </div>
         </div>
 
+        {/* Enhanced Button */}
         <Button 
-          variant={featured ? "secondary" : "default"} 
-          className={`w-full shine-effect ${featured ? 'font-semibold' : ''}`}
-          size="lg"
+          className={`w-full text-lg py-6 font-bold shine-effect transform transition-all duration-300 group-hover:scale-105 ${
+            featured 
+              ? 'bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary text-primary-foreground shadow-xl hover:shadow-primary/50' 
+              : 'bg-primary text-primary-foreground hover:bg-primary-glow shadow-lg hover:shadow-primary/30'
+          }`}
         >
           Buy Now
         </Button>
+        
+        {/* Trust Indicator */}
+        <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground pt-2">
+          <Shield className="w-4 h-4 text-success-green" />
+          <span>Instant Delivery</span>
+        </div>
       </CardContent>
     </Card>
   );

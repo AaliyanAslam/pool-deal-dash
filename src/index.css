@@ -2,71 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 8 Ball Pool Deals Design System - Premium Gaming Theme */
+/* Premium Black + Gold Gaming Theme */
 
 @layer base {
   :root {
-    /* Base colors */
-    --background: 0 0% 99%;
-    --foreground: 222 24% 16%;
+    /* Base colors - Premium Black Theme */
+    --background: 220 13% 8%;
+    --foreground: 45 23% 95%;
 
     /* Card colors */
-    --card: 0 0% 100%;
-    --card-foreground: 222 24% 16%;
+    --card: 220 13% 12%;
+    --card-foreground: 45 23% 95%;
 
     /* Popover colors */
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 24% 16%;
+    --popover: 220 13% 12%;
+    --popover-foreground: 45 23% 95%;
 
-    /* Pool table green theme */
-    --primary: 155 63% 25%;
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 155 63% 35%;
+    /* Premium Gold Primary */
+    --primary: 45 93% 58%;
+    --primary-foreground: 220 13% 8%;
+    --primary-glow: 45 100% 68%;
 
-    /* Premium gold accents */
-    --secondary: 45 93% 58%;
-    --secondary-foreground: 222 24% 16%;
-    --secondary-dark: 45 93% 48%;
+    /* Elegant Gold Secondary */
+    --secondary: 38 85% 65%;
+    --secondary-foreground: 220 13% 8%;
+    --secondary-dark: 38 85% 55%;
 
     /* Muted colors */
-    --muted: 215 25% 97%;
-    --muted-foreground: 222 14% 45%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 13% 65%;
 
     /* Accent colors */
-    --accent: 155 25% 95%;
-    --accent-foreground: 155 63% 25%;
+    --accent: 220 13% 18%;
+    --accent-foreground: 45 23% 95%;
 
     /* Destructive colors */
-    --destructive: 0 72% 51%;
+    --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
 
     /* Border and input */
-    --border: 215 20% 90%;
-    --input: 215 20% 90%;
-    --ring: 155 63% 25%;
+    --border: 220 13% 20%;
+    --input: 220 13% 18%;
+    --ring: 45 93% 58%;
 
     /* Gaming-specific colors */
-    --gaming-dark: 222 24% 12%;
-    --gaming-light: 155 15% 95%;
+    --gaming-dark: 220 13% 6%;
+    --gaming-light: 220 13% 15%;
     --premium-gold: 45 93% 58%;
     --success-green: 142 71% 45%;
+    --luxury-black: 220 13% 8%;
+    --deep-black: 220 20% 4%;
 
-    /* Gradients */
+    /* Premium Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-premium: linear-gradient(135deg, hsl(var(--premium-gold)), hsl(var(--secondary-dark)));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 25% 98%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(220 13% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-black)) 0%, hsl(var(--gaming-dark)) 50%, hsl(var(--luxury-black)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--gaming-dark)) 100%);
 
-    /* Shadows */
-    --shadow-card: 0 4px 20px -2px hsl(var(--primary) / 0.1);
-    --shadow-premium: 0 8px 32px -4px hsl(var(--premium-gold) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    /* Premium Shadows */
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-premium: 0 20px 60px -12px hsl(var(--premium-gold) / 0.3);
+    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.5);
+    --shadow-elegant: 0 12px 40px -8px hsl(0 0% 0% / 0.5);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Smooth Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-elegant: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -135,31 +141,116 @@
 }
 
 @layer components {
-  /* Gaming UI Components */
+  /* Premium Gaming UI Components */
   .hero-gradient {
-    @apply bg-gradient-to-br from-primary to-primary/80;
+    background: var(--gradient-hero);
+    position: relative;
+  }
+  
+  .hero-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 40%, hsl(var(--primary) / 0.1) 0%, transparent 50%);
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    transition: var(--transition-elegant);
+    @apply hover:scale-105;
+  }
+  
+  .card-hover:hover {
+    box-shadow: var(--shadow-elegant);
+    transform: translateY(-8px) scale(1.02);
   }
   
   .premium-glow {
-    @apply shadow-[0_0_30px_rgba(234,179,8,0.3)];
+    box-shadow: var(--shadow-premium);
+  }
+  
+  .premium-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-elegant);
+  }
+  
+  .premium-card:hover {
+    box-shadow: var(--shadow-premium);
+    transform: translateY(-4px);
+    border-color: hsl(var(--primary) / 0.3);
   }
   
   .floating-animation {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
   
+  .pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  /* Keyframe Animations */
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-12px); }
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--primary) / 0.3);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
   
   @keyframes shine {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
   }
   
   .shine-effect {
@@ -174,7 +265,57 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    animation: shine 2s infinite;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.3), transparent);
+    animation: shine 3s infinite;
+  }
+  
+  .shimmer-effect {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--card)) 25%,
+      hsl(var(--muted)) 50%,
+      hsl(var(--card)) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+  
+  /* Typography Enhancements */
+  .gradient-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-shadow-gold {
+    text-shadow: 0 2px 4px hsl(var(--primary) / 0.3);
+  }
+  
+  /* Pattern Overlays */
+  .pattern-overlay {
+    position: relative;
+  }
+  
+  .pattern-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--secondary) / 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  /* Elegant Borders */
+  .gold-border {
+    border: 1px solid;
+    border-image: var(--gradient-gold) 1;
+  }
+  
+  .glass-effect {
+    background: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.3);
   }
 }
