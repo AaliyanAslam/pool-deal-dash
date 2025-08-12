@@ -54,7 +54,7 @@ export const DealCard = ({ title, price, description, icon = "coins", featured =
           
           <div className="relative">
             <div className={`text-4xl font-black mb-6 ${
-              featured ? 'gradient-text text-shadow-gold' : 'text-foreground'
+              featured ? 'gradient-text text-shadow-blue' : 'text-foreground'
             }`}>
               Rs {price}
             </div>

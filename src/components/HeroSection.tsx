@@ -23,7 +23,7 @@ export const HeroSection = () => {
 
           {/* Main Heading with Premium Typography */}
           <div className="space-y-6">
-            <h1 className="text-6xl md:text-8xl font-black leading-tight gradient-text text-shadow-gold">
+            <h1 className="text-6xl md:text-8xl font-black leading-tight gradient-text text-shadow-blue">
               Get Your 8 Ball Pool
             </h1>
             <h2 className="text-5xl md:text-7xl font-black leading-tight text-foreground">

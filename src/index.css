@@ -2,70 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Premium Black + Gold Gaming Theme */
+/* Premium Blue Pool Gaming Theme */
 
 @layer base {
   :root {
-    /* Base colors - Premium Black Theme */
-    --background: 220 13% 8%;
-    --foreground: 45 23% 95%;
+    /* Base colors - Ocean Blue Theme */
+    --background: 220 45% 8%;
+    --foreground: 210 100% 95%;
 
     /* Card colors */
-    --card: 220 13% 12%;
-    --card-foreground: 45 23% 95%;
+    --card: 220 55% 12%;
+    --card-foreground: 210 100% 95%;
 
     /* Popover colors */
-    --popover: 220 13% 12%;
-    --popover-foreground: 45 23% 95%;
+    --popover: 220 55% 12%;
+    --popover-foreground: 210 100% 95%;
 
-    /* Premium Gold Primary */
-    --primary: 45 93% 58%;
-    --primary-foreground: 220 13% 8%;
-    --primary-glow: 45 100% 68%;
+    /* Electric Blue Primary */
+    --primary: 210 100% 55%;
+    --primary-foreground: 220 45% 8%;
+    --primary-glow: 210 100% 65%;
 
-    /* Elegant Gold Secondary */
-    --secondary: 38 85% 65%;
-    --secondary-foreground: 220 13% 8%;
-    --secondary-dark: 38 85% 55%;
+    /* Ocean Blue Secondary */
+    --secondary: 200 90% 45%;
+    --secondary-foreground: 220 45% 8%;
+    --secondary-dark: 200 90% 35%;
 
     /* Muted colors */
-    --muted: 220 13% 15%;
-    --muted-foreground: 220 13% 65%;
+    --muted: 220 40% 15%;
+    --muted-foreground: 220 25% 65%;
 
     /* Accent colors */
-    --accent: 220 13% 18%;
-    --accent-foreground: 45 23% 95%;
+    --accent: 220 50% 18%;
+    --accent-foreground: 210 100% 95%;
 
     /* Destructive colors */
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 98%;
 
     /* Border and input */
-    --border: 220 13% 20%;
-    --input: 220 13% 18%;
-    --ring: 45 93% 58%;
+    --border: 220 40% 20%;
+    --input: 220 50% 18%;
+    --ring: 210 100% 55%;
 
     /* Gaming-specific colors */
-    --gaming-dark: 220 13% 6%;
-    --gaming-light: 220 13% 15%;
-    --premium-gold: 45 93% 58%;
+    --gaming-dark: 220 50% 6%;
+    --gaming-light: 220 45% 15%;
+    --electric-blue: 210 100% 55%;
     --success-green: 142 71% 45%;
-    --luxury-black: 220 13% 8%;
-    --deep-black: 220 20% 4%;
+    --ocean-blue: 220 45% 8%;
+    --deep-blue: 225 60% 4%;
 
-    /* Premium Gradients */
+    /* Premium Blue Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-premium: linear-gradient(135deg, hsl(var(--premium-gold)), hsl(var(--secondary-dark)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(220 13% 15%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-black)) 0%, hsl(var(--gaming-dark)) 50%, hsl(var(--luxury-black)) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--secondary-dark)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(220 50% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-blue)) 0%, hsl(var(--gaming-dark)) 50%, hsl(var(--ocean-blue)) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--gaming-dark)) 100%);
 
-    /* Premium Shadows */
-    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
-    --shadow-premium: 0 20px 60px -12px hsl(var(--premium-gold) / 0.3);
-    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.5);
-    --shadow-elegant: 0 12px 40px -8px hsl(0 0% 0% / 0.5);
+    /* Premium Blue Shadows */
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.6);
+    --shadow-premium: 0 20px 60px -12px hsl(var(--electric-blue) / 0.4);
+    --shadow-glow: 0 0 60px hsl(var(--primary-glow) / 0.6);
+    --shadow-elegant: 0 12px 40px -8px hsl(210 100% 20% / 0.3);
 
     /* Smooth Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -282,14 +282,14 @@
   
   /* Typography Enhancements */
   .gradient-text {
-    background: var(--gradient-gold);
+    background: var(--gradient-blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
-  .text-shadow-gold {
-    text-shadow: 0 2px 4px hsl(var(--primary) / 0.3);
+
+  .text-shadow-blue {
+    text-shadow: 0 2px 4px hsl(var(--primary) / 0.4);
   }
   
   /* Pattern Overlays */
@@ -308,9 +308,9 @@
   }
   
   /* Elegant Borders */
-  .gold-border {
+  .blue-border {
     border: 1px solid;
-    border-image: var(--gradient-gold) 1;
+    border-image: var(--gradient-blue) 1;
   }
   
   .glass-effect {
