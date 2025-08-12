@@ -1,5 +1,6 @@
 import { Gamepad2 } from "lucide-react";
 import poolIgniteLogo from "@/assets/poolignite.png";
+import { Link } from "react-router-dom";
 
 
 export const Footer = () => {
@@ -28,7 +29,7 @@ export const Footer = () => {
             </div>
             
             <div className="text-sm text-muted-foreground">
-              © 2024 Pool Deal Dash. All rights reserved.
+              © 2024 Pool Ignite. All rights reserved.
             </div>
           </div>
 
@@ -55,10 +56,10 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#faq" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
+                <Link to="/faq" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -67,26 +68,15 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold text-xl gradient-text mb-6">Support</h4>
             <ul className="space-y-4">
+         
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
-                  <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
-                  <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
+                <Link to="/refund-policy" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   Refund Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
+                <a href="#contact" className="text-muted-foreground hover:text-primary transition-all duration-300 text-lg font-medium group flex items-center gap-2">
                   <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   24/7 Support
                 </a>
@@ -101,12 +91,14 @@ export const Footer = () => {
             <p className="text-muted-foreground text-lg">
               Made with <span className="gradient-text font-semibold">❤️</span> for 8 Ball Pool players worldwide
             </p>
-            <div className="flex items-center gap-6">
+           <a href="https://wa.link/8fsrrq" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors">
+             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-success-green rounded-full animate-pulse"></div>
                 <span className="text-foreground font-semibold">Service Online</span>
               </div>
             </div>
+           </a>
           </div>
         </div>
       </div>
