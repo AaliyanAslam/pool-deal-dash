@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Coins, Zap, Shield, Trophy, Star, Crown } from "lucide-react";
+import coinsImage from "@/assets/coins.png";
 
 interface DealCardProps {
   title: string;
@@ -33,15 +34,32 @@ export const DealCard = ({ title, price, description, icon = "coins", featured =
       )}
       
       <CardContent className="p-8 text-center space-y-6 relative">
-        {/* Premium Icon with Enhanced Animation */}
-        <div className={`w-20 h-20 mx-auto rounded-full ${
-          featured 
-            ? 'bg-gradient-to-br from-primary to-secondary shadow-2xl' 
-            : 'bg-gradient-to-br from-accent to-muted'
-        } flex items-center justify-center floating-animation group-hover:scale-110 transition-transform duration-300`}>
-          <IconComponent className={`w-10 h-10 ${
-            featured ? 'text-primary-foreground' : 'text-primary'
-          }`} />
+        {/* Professional Coin/Icon Display */}
+        <div className="relative w-24 h-24 mx-auto floating-animation group-hover:scale-110 transition-transform duration-300">
+          {icon === "coins" ? (
+            <div className="relative w-full h-full">
+              <img 
+                src={coinsImage} 
+                alt={`${title} coins`}
+                className="w-full h-full object-contain drop-shadow-2xl"
+              />
+              <div className={`absolute inset-0 rounded-full ${
+                featured 
+                  ? 'bg-gradient-to-br from-primary/20 to-secondary/20' 
+                  : 'bg-gradient-to-br from-accent/10 to-muted/10'
+              }`}></div>
+            </div>
+          ) : (
+            <div className={`w-full h-full rounded-full ${
+              featured 
+                ? 'bg-gradient-to-br from-primary to-secondary shadow-2xl' 
+                : 'bg-gradient-to-br from-accent to-muted'
+            } flex items-center justify-center`}>
+              <IconComponent className={`w-12 h-12 ${
+                featured ? 'text-primary-foreground' : 'text-primary'
+              }`} />
+            </div>
+          )}
         </div>
         
         {/* Enhanced Content */}

@@ -137,6 +137,8 @@
 
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
 }
 
