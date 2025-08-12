@@ -35,32 +35,39 @@ export const DealCard = ({ title, price, description, icon = "coins", featured =
       
       <CardContent className="p-8 text-center space-y-6 relative">
         {/* Professional Coin/Icon Display */}
-        <div className="relative w-24 h-24 mx-auto floating-animation group-hover:scale-110 transition-transform duration-300">
-          {icon === "coins" ? (
-            <div className="relative w-full h-full">
-              <img 
-                src={coinsImage} 
-                alt={`${title} coins`}
-                className="w-full h-full object-contain drop-shadow-2xl"
-              />
-              <div className={`absolute inset-0 rounded-full ${
-                featured 
-                  ? 'bg-gradient-to-br from-primary/20 to-secondary/20' 
-                  : 'bg-gradient-to-br from-accent/10 to-muted/10'
-              }`}></div>
-            </div>
-          ) : (
-            <div className={`w-full h-full rounded-full ${
-              featured 
-                ? 'bg-gradient-to-br from-primary to-secondary shadow-2xl' 
-                : 'bg-gradient-to-br from-accent to-muted'
-            } flex items-center justify-center`}>
-              <IconComponent className={`w-12 h-12 ${
-                featured ? 'text-primary-foreground' : 'text-primary'
-              }`} />
-            </div>
-          )}
-        </div>
+     <div className="relative w-28 h-28 sm:w-32 sm:h-32 mx-auto group-hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
+  {icon === "coins" ? (
+    <div className="relative w-full h-full rounded-full p-1 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 shadow-xl overflow-hidden animate-bounce">
+      <img
+        src={coinsImage}
+        alt={`${title} coins`}
+        className="w-full h-full object-contain rounded-full"
+      />
+      <div
+        className={`absolute inset-0 rounded-full pointer-events-none bg-gradient-to-br ${
+          featured
+            ? 'from-primary/30 to-secondary/30 animate-pulse'
+            : 'from-accent/10 to-muted/10'
+        }`}
+      ></div>
+    </div>
+  ) : (
+    <div
+      className={`w-full h-full rounded-full ${
+        featured
+          ? 'bg-gradient-to-br from-primary to-secondary shadow-2xl'
+          : 'bg-gradient-to-br from-accent to-muted'
+      } flex items-center justify-center`}
+    >
+      <IconComponent
+        className={`w-12 h-12 ${
+          featured ? 'text-primary-foreground' : 'text-primary'
+        }`}
+      />
+    </div>
+  )}
+</div>
+
         
         {/* Enhanced Content */}
         <div className="space-y-4">
