@@ -1,4 +1,5 @@
 import { DealCard } from "./DealCard";
+import pokerChips from "@/assets/poker-chips.png";
 
 export const DealsSection = () => {
   const deals = [
@@ -44,9 +45,12 @@ export const DealsSection = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-background to-gaming-light pattern-overlay" id="deals">
       <div className="container mx-auto px-6">
-        {/* Enhanced Header */}
-        <div className="text-center mb-20 fade-in-up">
-          <h2 className="text-5xl md:text-7xl font-black gradient-text mb-6 text-shadow-gold">
+        {/* Section Header with Professional Accent */}
+        <div className="text-center mb-20 relative fade-in-up">
+          <div className="absolute top-0 right-1/4 w-16 h-16 opacity-10 floating-animation">
+            <img src={pokerChips} alt="" className="w-full h-full object-contain" />
+          </div>
+          <h2 className="text-5xl md:text-7xl font-black gradient-text mb-6 text-shadow-blue">
             Choose Your Deal
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
