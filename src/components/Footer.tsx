@@ -1,14 +1,8 @@
 import { Gamepad2 } from "lucide-react";
-import pokerChips from "@/assets/poker-chips.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-deep-black to-gaming-dark pattern-overlay py-16 relative">
-      {/* Professional Background Accent */}
-      <div className="absolute top-10 right-10 w-20 h-20 opacity-5">
-        <img src={pokerChips} alt="" className="w-full h-full object-contain floating-animation" />
-      </div>
-      
+    <footer className="bg-gradient-to-br from-deep-black to-gaming-dark pattern-overlay py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Enhanced Brand */}

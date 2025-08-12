@@ -1,23 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Gamepad2, Zap, Shield, Star } from "lucide-react";
-import pokerChips from "@/assets/poker-chips.png";
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-gradient pattern-overlay overflow-hidden">
-      {/* Professional Poker Chips Background */}
-      <div className="absolute inset-0 pointer-events-none opacity-5">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 floating-animation">
-          <img src={pokerChips} alt="" className="w-full h-full object-contain" />
-        </div>
-        <div className="absolute top-1/2 right-1/4 w-24 h-24 floating-animation" style={{ animationDelay: '1s' }}>
-          <img src={pokerChips} alt="" className="w-full h-full object-contain" />
-        </div>
-        <div className="absolute bottom-1/3 left-1/3 w-28 h-28 floating-animation" style={{ animationDelay: '2s' }}>
-          <img src={pokerChips} alt="" className="w-full h-full object-contain" />
-        </div>
-      </div>
-
       {/* Floating Decorative Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-32 h-32 border border-primary/30 rounded-full floating-animation"></div>
@@ -28,15 +14,10 @@ export const HeroSection = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto space-y-12 fade-in-up">
-          {/* Premium Icon with Poker Chips */}
+          {/* Premium Icon */}
           <div className="flex justify-center mb-12">
-            <div className="relative">
-              <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center floating-animation pulse-glow shadow-2xl">
-                <Gamepad2 className="w-12 h-12 text-primary-foreground" />
-              </div>
-              <div className="absolute -top-2 -right-2 w-8 h-8 opacity-80">
-                <img src={pokerChips} alt="" className="w-full h-full object-contain" />
-              </div>
+            <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center floating-animation pulse-glow shadow-2xl">
+              <Gamepad2 className="w-12 h-12 text-primary-foreground" />
             </div>
           </div>
 
