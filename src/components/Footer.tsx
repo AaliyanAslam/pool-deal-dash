@@ -1,4 +1,6 @@
 import { Gamepad2 } from "lucide-react";
+import poolIgniteLogo from "@/assets/poolignite.png";
+
 
 export const Footer = () => {
   return (
@@ -7,12 +9,11 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Enhanced Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-2xl pulse-glow">
-                <Gamepad2 className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <span className="text-3xl font-black gradient-text">Pool Deal Dash</span>
-            </div>
+             <div className="flex items-center gap-4">
+        <img src={poolIgniteLogo} alt="Pool Ignite Logo" className="h-16 w-auto rounded-md" />
+
+            <span className="text-2xl font-black gradient-text">Pool Ignite</span>
+          </div>
             <p className="text-muted-foreground mb-6 max-w-lg text-lg leading-relaxed">
               Your trusted source for premium 8 Ball Pool coins, tools, and exclusive items. 
               <span className="gradient-text font-semibold"> Fast, secure, and reliable service since 2020.</span>

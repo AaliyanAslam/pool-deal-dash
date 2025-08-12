@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Gamepad2, Menu, X } from "lucide-react";
 import { useState } from "react";
+import poolIgniteLogo from "@/assets/poolignite.png";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,9 +13,8 @@ export const Navigation = () => {
           {/* Enhanced Logo */}
      <a href="#">
            <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg pulse-glow">
-              <Gamepad2 className="w-7 h-7 text-primary-foreground" />
-            </div>
+        <img src={poolIgniteLogo} alt="Pool Ignite Logo" className="h-16 w-auto rounded-md" />
+
             <span className="text-2xl font-black gradient-text">Pool Ignite</span>
           </div>
      </a>
