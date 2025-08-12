@@ -13,7 +13,7 @@ export const Navigation = () => {
           {/* Enhanced Logo */}
      <a href="#">
            <div className="flex items-center gap-4">
-        <img src={poolIgniteLogo} alt="Pool Ignite Logo" className="h-16 w-auto rounded-md" />
+        <img src={poolIgniteLogo} alt="Pool Ignite Logo" className="h-12 w-auto rounded-md" />
 
             <span className="text-2xl font-black gradient-text">Pool Ignite</span>
           </div>
