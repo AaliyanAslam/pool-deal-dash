@@ -10,12 +10,14 @@ export const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Enhanced Logo */}
-          <div className="flex items-center gap-4">
+     <a href="#">
+           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg pulse-glow">
               <Gamepad2 className="w-7 h-7 text-primary-foreground" />
             </div>
             <span className="text-2xl font-black gradient-text">Pool Ignite</span>
           </div>
+     </a>
 
           {/* Enhanced Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">

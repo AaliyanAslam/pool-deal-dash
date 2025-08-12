@@ -56,7 +56,7 @@ export const DealCard = ({ title, price, description, icon = "coins", featured =
             <div className={`text-4xl font-black mb-6 ${
               featured ? 'gradient-text text-shadow-gold' : 'text-foreground'
             }`}>
-              ₹{price}
+              Rs {price}
             </div>
             {featured && (
               <div className="absolute -top-2 -right-2">
@@ -67,15 +67,23 @@ export const DealCard = ({ title, price, description, icon = "coins", featured =
         </div>
 
         {/* Enhanced Button */}
-        <Button 
-          className={`w-full text-lg py-6 font-bold shine-effect transform transition-all duration-300 group-hover:scale-105 ${
-            featured 
-              ? 'bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary text-primary-foreground shadow-xl hover:shadow-primary/50' 
-              : 'bg-primary text-primary-foreground hover:bg-primary-glow shadow-lg hover:shadow-primary/30'
-          }`}
-        >
-          Buy Now
-        </Button>
+   <a
+  href="https://wa.link/8fsrrq"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full"
+>
+  <Button
+    className={`w-full text-base sm:text-lg md:text-xl py-4 sm:py-5 md:py-6 font-bold shine-effect transform transition-all duration-300 group-hover:scale-105 ${
+      featured
+        ? 'bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary text-primary-foreground shadow-xl hover:shadow-primary/50'
+        : 'bg-primary text-primary-foreground hover:bg-primary-glow shadow-lg hover:shadow-primary/30'
+    }`}
+  >
+    Buy Now
+  </Button>
+</a>
+
         
         {/* Trust Indicator */}
         <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground pt-2">

@@ -55,14 +55,21 @@ export const HeroSection = () => {
 
           {/* Premium CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              onClick={() => window.location.href = "#deals"}
-              size="lg" 
-              className="text-xl px-12 py-8 shine-effect font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary text-primary-foreground shadow-2xl hover:shadow-primary/50 transform hover:scale-105 transition-all duration-300"
-            >
-              Order Now
-              <ArrowRight className="ml-3 w-6 h-6" />
-            </Button>
+       <a
+  href="https://wa.link/8fsrrq"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full sm:w-auto"
+>
+  <Button
+    size="lg"
+    className="text-lg sm:text-xl px-6 sm:px-10 md:px-12 py-4 sm:py-6 md:py-8 shine-effect font-bold bg-gradient-to-r from-primary to-secondary hover:from-primary-glow hover:to-secondary text-primary-foreground shadow-2xl hover:shadow-primary/50 transform hover:scale-105 transition-all duration-300"
+  >
+    Order Now
+    <ArrowRight className="ml-2 sm:ml-3 w-5 h-5 sm:w-6 sm:h-6" />
+  </Button>
+</a>
+
             <a 
               href="#deals"
               className="rounded-xl text-xl py-4 px-8 font-bold glass-effect border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 transform hover:scale-105 transition-all duration-300"
