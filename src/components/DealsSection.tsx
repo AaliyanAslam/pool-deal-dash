@@ -44,49 +44,72 @@ export const DealsSection = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-background to-gaming-light pattern-overlay" id="deals">
       <div className="container mx-auto px-6">
-        {/* Enhanced Header */}
-        <div className="text-center mb-20 fade-in-up">
-          <h2 className="text-5xl md:text-7xl font-black gradient-text mb-6 text-shadow-gold">
+        {/* AI-Enhanced Header */}
+        <div className="text-center mb-24 fade-in-up">
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black gradient-text mb-8 text-shadow-gold morph-gradient tracking-tight">
             Choose Your Deal
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+          <div className="w-32 h-1.5 bg-gradient-to-r from-primary via-primary-glow to-secondary mx-auto mb-10 rounded-full shine-effect"></div>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             Select from our premium collection of 8 Ball Pool coins, tools, and exclusive items. 
-            <span className="gradient-text font-semibold"> All deals come with instant delivery and lifetime support.</span>
+            <span className="gradient-text font-semibold morph-gradient"> All deals come with AI-powered instant delivery and lifetime support.</span>
           </p>
+          <div className="flex justify-center items-center gap-3 mt-6">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <span className="text-primary font-semibold">🤖 AI-Optimized Pricing</span>
+            <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
+          </div>
         </div>
 
-        {/* Enhanced Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        {/* AI-Enhanced Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto mb-20">
           {deals.map((deal, index) => (
-            <div key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+            <div 
+              key={index} 
+              className="group"
+              style={{ 
+                animationDelay: `${index * 0.15}s`,
+                transform: `perspective(1000px) rotateX(${Math.sin(index) * 2}deg) rotateY(${Math.cos(index) * 2}deg)`
+              }}
+            >
               <DealCard {...deal} />
             </div>
           ))}
         </div>
 
-        {/* Enhanced Custom Deal Section */}
-        <div className="text-center mt-16 fade-in-up">
-          <div className="glass-effect rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Need a Custom Deal?</h3>
-            <p className="text-muted-foreground mb-6">
-              Looking for bulk orders or specific packages? We've got you covered!
-            </p>
-<a
-  href="https://wa.link/8fsrrq"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-gradient-to-r from-primary to-secondary text-primary-foreground 
-             px-4 py-2 text-sm 
-             sm:px-6 sm:py-3 sm:text-base 
-             md:px-8 md:py-4 md:text-lg 
-             rounded-full font-bold 
-             hover:scale-105 transition-transform duration-300 hover:opacity-90"
->
-  Contact us for bulk orders
-</a>
-
-
+        {/* AI-Enhanced Custom Deal Section */}
+        <div className="text-center mt-20 fade-in-up">
+          <div className="relative glass-effect rounded-3xl p-10 max-w-3xl mx-auto border-2 border-primary/20 backdrop-blur-lg">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl font-black gradient-text mb-6 morph-gradient">
+                🤖 Need a Custom AI Deal?
+              </h3>
+              <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                Looking for bulk orders or specific packages? Our AI system can create personalized deals just for you!
+              </p>
+              <a
+                href="https://wa.link/8fsrrq"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-primary via-primary-glow to-secondary text-primary-foreground 
+                           px-10 py-5 text-lg font-bold rounded-full
+                           hover:scale-110 transition-all duration-500 magnetic shine-effect morph-gradient
+                           border-2 border-primary/30 backdrop-blur-sm shadow-2xl hover:shadow-primary/50"
+              >
+                🚀 Contact AI Assistant for Bulk Orders
+              </a>
+              <div className="flex justify-center items-center gap-6 mt-6">
+                <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  AI Available 24/7
+                </span>
+                <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                  Instant Response
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
