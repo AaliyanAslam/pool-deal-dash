@@ -47,42 +47,16 @@
 }
 
 @layer components {
-  /* ====== AI-Powered Hero Section ====== */
+  /* ====== Hero Section Gradient ====== */
   .hero-gradient {
     background: var(--gradient-hero);
     position: relative;
-    overflow: hidden;
   }
   .hero-gradient::before {
     content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.15), transparent 50%);
-  }
-  .hero-gradient::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: 
-      radial-gradient(circle at 80% 20%, hsl(var(--secondary) / 0.1), transparent 40%),
-      radial-gradient(circle at 40% 80%, hsl(var(--primary) / 0.08), transparent 40%);
-    animation: aurora 20s ease-in-out infinite alternate;
-  }
-
-  /* ====== Aurora Background Animation ====== */
-  @keyframes aurora {
-    0% { 
-      transform: scale(1) rotate(0deg);
-      opacity: 0.7;
-    }
-    50% { 
-      transform: scale(1.1) rotate(180deg);
-      opacity: 1;
-    }
-    100% { 
-      transform: scale(1) rotate(360deg);
-      opacity: 0.7;
-    }
   }
 
   /* ====== Premium Card ====== */
@@ -99,56 +73,10 @@
     border-color: hsl(var(--primary) / 0.6);
   }
 
-  /* ====== AI-Enhanced Text Effects ====== */
+  /* ====== Neon Glow Text ====== */
   .neon-text {
     color: hsl(var(--primary));
     text-shadow: 0 0 8px hsl(var(--primary-glow)), 0 0 15px hsl(var(--primary-glow) / 0.7);
-  }
-  
-  .gradient-text {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: morphGradient 4s ease infinite;
-  }
-  
-  .text-shadow-blue {
-    text-shadow: 0 0 20px hsl(var(--primary) / 0.6);
-  }
-  
-  .text-shadow-gold {
-    text-shadow: 0 0 20px hsl(var(--secondary) / 0.6);
-  }
-
-  /* ====== Fade In Animations ====== */
-  .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .slide-in-left {
-    animation: slideInLeft 0.6s ease-out forwards;
-  }
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
   }
 
   /* ====== Glassmorphism Effect ====== */
@@ -187,42 +115,26 @@
     box-shadow: 0 0 25px hsl(var(--secondary-glow) / 0.9);
   }
 
-  /* ====== AI-Enhanced Animations ====== */
+  /* ====== Animations ====== */
   @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-8px) rotate(1deg); }
-    50% { transform: translateY(-12px) rotate(0deg); }
-    75% { transform: translateY(-8px) rotate(-1deg); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
   }
   .float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  @keyframes floating-animation {
-    0%, 100% { transform: translateY(0) scale(1); }
-    50% { transform: translateY(-20px) scale(1.05); }
-  }
-  .floating-animation {
-    animation: floating-animation 8s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
 
   @keyframes pulseGlow {
-    0%, 100% { 
-      box-shadow: 0 0 10px hsl(var(--primary) / 0.3);
-      transform: scale(1);
-    }
-    50% { 
-      box-shadow: 0 0 25px hsl(var(--primary) / 0.6), 0 0 40px hsl(var(--primary) / 0.3);
-      transform: scale(1.02);
-    }
+    0%, 100% { box-shadow: 0 0 10px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 25px hsl(var(--primary) / 0.6); }
   }
   .pulse-glow {
-    animation: pulseGlow 3s ease-in-out infinite;
+    animation: pulseGlow 2s ease-in-out infinite;
   }
 
   @keyframes shine {
-    0% { transform: translateX(-100%) rotate(-10deg); }
-    100% { transform: translateX(100%) rotate(-10deg); }
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
   }
   .shine-effect {
     position: relative;
@@ -232,77 +144,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(110deg, transparent, hsl(var(--primary) / 0.2), transparent);
-    animation: shine 4s infinite;
-  }
-
-  /* ====== Particle Animation ====== */
-  @keyframes particles {
-    0% { 
-      transform: translateY(100vh) rotate(0deg);
-      opacity: 0;
-    }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { 
-      transform: translateY(-100vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
-  .particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-  }
-  .particle {
-    position: absolute;
-    background: hsl(var(--primary) / 0.1);
-    border-radius: 50%;
-    animation: particles 15s linear infinite;
-  }
-
-  /* ====== Magnetic Hover Effect ====== */
-  @keyframes magnetic {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(var(--x, 0), var(--y, 0)); }
-  }
-  .magnetic {
-    transition: transform 0.2s ease-out;
-  }
-  .magnetic:hover {
-    animation: magnetic 0.2s ease-out forwards;
-  }
-
-  /* ====== Morphing Gradient ====== */
-  @keyframes morphGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  .morph-gradient {
-    background-size: 200% 200%;
-    animation: morphGradient 6s ease infinite;
-  }
-
-  /* ====== Pattern Overlay ====== */
-  .pattern-overlay {
-    position: relative;
-  }
-  .pattern-overlay::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.05) 2px, transparent 2px);
-    background-size: 60px 60px;
-    animation: pattern-drift 30s linear infinite;
-  }
-  
-  @keyframes pattern-drift {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(60px, 60px); }
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.15), transparent);
+    animation: shine 3s infinite;
   }
 }
